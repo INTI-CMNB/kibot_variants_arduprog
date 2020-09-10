@@ -5,7 +5,7 @@ This is an example of how to use variants with [KiBot](https://github.com/INTI-C
 ## Index
 
 * [Definition](#Definition)
-* [Implementation](#How is this implemented)
+* [Implementation](#Implementation)
 * [Example](#Example)
 * [**Result**](#Results)
 
@@ -200,5 +200,19 @@ XTAL variant
 
 USB variant
 [![USB variant](https://raw.githubusercontent.com/INTI-CMNB/kibot_variants_arduprog/master/images/t1-schematic_USB.png)](https://raw.githubusercontent.com/INTI-CMNB/kibot_variants_arduprog/master/images/t1-schematic_USB.pdf)
+
+
+## Bill of Materials (HTML and XLSX)
+
+Excluded components are listed as DNF in a separated list. Note we could also remove them.
+
+Default variant
+[![Default variant](https://raw.githubusercontent.com/INTI-CMNB/kibot_variants_arduprog/master/images/t1-bom.png)](https://raw.githubusercontent.com/INTI-CMNB/kibot_variants_arduprog/master/images/t1-bom.html)
+
+XTAL variant
+[![Default variant](https://raw.githubusercontent.com/INTI-CMNB/kibot_variants_arduprog/master/images/t1-bom_XTAL.png)](https://raw.githubusercontent.com/INTI-CMNB/kibot_variants_arduprog/master/images/t1-bom_XTAL.html)
+
+USB variant
+[![Default variant](https://raw.githubusercontent.com/INTI-CMNB/kibot_variants_arduprog/master/images/t1-bom_USB.png)](https://raw.githubusercontent.com/INTI-CMNB/kibot_variants_arduprog/master/images/t1-bom_USB.html)
 
 
