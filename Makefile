@@ -11,8 +11,8 @@ drc:
 	kibot $(DEBUG) -d $(OUT_DIR) -s run_erc -i
 
 ardu_prog:
-	time kibot $(DEBUG) -c ardu_prog.kibot.yaml -e t1.sch -d $(OUT_DIR)/default -g variant=default -s all
-	time kibot $(DEBUG) -c ardu_prog.kibot.yaml -e t1.sch -d $(OUT_DIR)/USB -g variant=USB -s all
-	time kibot $(DEBUG) -c ardu_prog.kibot.yaml -e t1.sch -d $(OUT_DIR)/XTAL -g variant=XTAL -s all
+	kibot $(DEBUG) -c ardu_prog.kibot.yaml -e t1.sch -d $(OUT_DIR)/default -g variant=default -s all
+	kibot $(DEBUG) -c ardu_prog.kibot.yaml -e t1.sch -d $(OUT_DIR)/USB -g variant=USB -s all
+	kibot $(DEBUG) -c ardu_prog.kibot.yaml -e t1.sch -d $(OUT_DIR)/XTAL -g variant=XTAL -s all
 
 .PHONY: ardu_prog erc drc
