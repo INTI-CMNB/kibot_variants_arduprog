@@ -7,6 +7,7 @@ This is an example of how to use variants with [KiBot](https://github.com/INTI-C
 * [Definition](#Definition)
 * [Implementation](#How is this implemented)
 * [Example](#Example)
+* [**Result**](#Results)
 
 ## Definition
 
@@ -78,4 +79,126 @@ To make it faster we can add it to one component, lets say to J4, and then use t
 Here is what we should have in the *Config* field:
 
 ![Symbol fields dialog](https://raw.githubusercontent.com/INTI-CMNB/kibot_variants_arduprog/master/images/SymbolFields.png)
+
+This is all we need to add to the schematic. Now is time to configure KiBot.
+
+If you don't know about the KiBot file format you could be interested in reading the following [explanation](https://github.com/INTI-CMNB/KiBot/blob/master/docs/KiPlotYAML.md).
+YAML files are self explanatory, so perhaps you can go on even without knowing about the format.
+
+Ok, now we have to define the three variants we mentioned before: **USB**, **XTAL** and **default**.
+All variants will be put in a section named **variants**. So we'll create a list of items, each item is a variant definition.
+Lets start with the simplest: **default**. Here is what we use:
+
+```yaml
+variants:
+  - name: 'default'
+    comment: 'Minimal PCB no USB'
+    type: kibom
+```
+
+This is the section **variants** and its first item. The name is **default** and we added a comment to remmember what this variant is.
+We also define the type as **kibom**, what we called *style*.
+
+Now lets go for the second, here we add:
+
+```yaml
+  - name: 'USB'
+    comment: 'Full board'
+    type: kibom
+    file_id: _USB
+    variant: USB
+```
+
+You'll notice two new attributes: `file_id` and `variant`. The first is what we'll add to the names of the files in order to distinguish from the **default**.
+And the second ... well this is just the *tag* we used to mark **USB** components.
+
+You should be able to figure out how to define the third variant, here we go:
+
+```yaml
+  - name: 'XTAL'
+    comment: 'No USB, but crystal included'
+    type: kibom
+    file_id: _XTAL
+    variant: XTAL
+```
+
+A little bit long, but simple. Here is all together:
+
+```yaml
+variants:
+  - name: 'default'
+    comment: 'Minimal PCB no USB'
+    type: kibom
+
+  - name: 'USB'
+    comment: 'Full board'
+    type: kibom
+    file_id: _USB
+    variant: USB
+
+  - name: 'XTAL'
+    comment: 'No USB, but crystal included'
+    type: kibom
+    file_id: _XTAL
+    variant: XTAL
+```
+
+This is all we need to define the variants. Of course our config file must define what to do with the variants.
+But this document is about the variants, we won't focuse on the rest.
+
+What now? How can we tell KiBot what variant to use?
+There are three methodes:
+
+1. Use the `variant` option for an specific output.
+2. Select a default variant to be used by all outputs that doesn't specify a variant.
+3. Same as above but from the command line.
+
+The simplest way is the third. In this case we just need to add `-g variant=NAME` to the command line.
+Lets say we have a copy of the repo containing this example and we want to generate the BoM.
+In our example the HTML BoM output is named `bom_html` so we can just run:
+
+```bash
+kibot -s all -d Result bom_html
+```
+
+This will create `Result/BoM/t1-bom.html`. To generate the BoM for the **USB** variant we can use:
+
+```bash
+kibot -s all -d USB -g variant=USB bom_html
+```
+
+And we'll get a different BoM in `USB/BoM/t1-bom_USB.html`.
+
+The CI/CD workflow for this repo runs the ERC and DRC checks and them generates all the configured outputs for the three variants.
+The commands used are approximately these:
+
+```bash
+kibot -d Generated -s run_drc -i
+kibot -d Generated -s run_erc -i
+kibot -d Generated/default -g variant=default -s all
+kibot -d Generated/USB -g variant=USB -s all
+kibot -d Generated/XTAL -g variant=XTAL -s all
+```
+
+The first two are the checks, no output generated. The other three skips the checks and generates all outputs for each variant.
+All files are stored in the `Generated` folder.
+
+
+# Results
+
+Here is what we get, you can download the results obtained on GitHub CI/CD Actions from [here](https://github.com/INTI-CMNB/kibot_variants_arduprog/suites/1173923934/artifacts/17126083).
+
+## Schematic PDF
+
+Excluded components are marked with a cross:
+
+Default variant
+[![Default variant](https://raw.githubusercontent.com/INTI-CMNB/kibot_variants_arduprog/master/images/t1-schematic.png)](https://raw.githubusercontent.com/INTI-CMNB/kibot_variants_arduprog/master/images/t1-schematic.pdf)
+
+XTAL variant
+[![XTAL variant](https://raw.githubusercontent.com/INTI-CMNB/kibot_variants_arduprog/master/images/t1-schematic_XTAL.png)](https://raw.githubusercontent.com/INTI-CMNB/kibot_variants_arduprog/master/images/t1-schematic_XTAL.pdf)
+
+USB variant
+[![USB variant](https://raw.githubusercontent.com/INTI-CMNB/kibot_variants_arduprog/master/images/t1-schematic_USB.png)](https://raw.githubusercontent.com/INTI-CMNB/kibot_variants_arduprog/master/images/t1-schematic_USB.pdf)
+
 
