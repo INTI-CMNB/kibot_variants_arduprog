@@ -1,0 +1,76 @@
+name: "Variants demo generator"
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    paths:
+      - '*.sch'
+      - '*.kicad_pcb'
+      - '*.kibot.yaml'
+      - 'Makefile'
+      - '.github/workflows/kibot.yml'
+  pull_request:
+    paths:
+      - '*.sch'
+      - '*.kicad_pcb'
+      - '*.kibot.yaml'
+      - 'Makefile'
+      - '.github/workflows/kibot.yml'
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  ERC:
+    runs-on: ubuntu-latest
+    container: setsoft/kicad_auto:10.4-5.1.6rc
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Run ERC
+      run: |
+        make erc
+
+    - name: Retrieve results
+      uses: actions/upload-artifact@v1
+      with:
+        name: ERC_Output
+        path: Generated
+
+  DRC:
+    runs-on: ubuntu-latest
+    container: setsoft/kicad_auto:10.4-5.1.6rc
+    needs: ERC
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Run DRC
+      run: |
+        make drc
+
+    - name: Retrieve results
+      uses: actions/upload-artifact@v1
+      with:
+        name: DRC_Output
+        path: Generated
+
+  FabSch:
+    name: Schematic fabrication files
+    runs-on: ubuntu-latest
+    container: setsoft/kicad_auto:10.4-5.1.6rc
+    needs: [ERC, DRC]
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Run schematic stuff
+      run: |
+        make ardu_prog
+
+    - name: Retrieve results
+      uses: actions/upload-artifact@v1
+      with:
+        name: All_Output
+        path: Generated
+
