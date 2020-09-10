@@ -1,0 +1,154 @@
+# Example KiBot config file for ardu_prog.pro
+kibot:
+  version: 1
+
+preflight:
+  check_zone_fills: true
+  run_erc: true
+  run_drc: true
+
+
+variants:
+  - name: 'default'
+    comment: 'Minimal PCB no USB'
+    type: kibom
+
+  - name: 'USB'
+    comment: 'Full board'
+    type: kibom
+    file_id: _USB
+    variant: USB
+
+  - name: 'XTAL'
+    comment: 'No USB, but crystal included'
+    type: kibom
+    file_id: _XTAL
+    variant: XTAL
+
+outputs:
+  - name: 'bom_xlsx'
+    comment: "Spreadsheet for the Bill of Materials"
+    type: bom
+    dir: BoM
+    options: &bom_options
+      xlsx:
+        datasheet_as_link: MFP
+        title: 'KiBot variants example'
+        max_col_width: 40
+        highlight_empty: false
+      columns:
+        - Row
+        - References
+        - Quantity Per PCB
+        - field: Value
+          join: ['voltage', 'current', 'power', 'tolerance']
+        - field: MFN
+          name: Manufacturer
+        - field: MFP
+          name: Manf. Part
+        - Footprint
+      normalize_values: true
+
+  - name: 'bom_html'
+    comment: "HTML for the Bill of Materials"
+    type: bom
+    dir: BoM
+    options:
+      <<: *bom_options
+      format: HTML
+      html:
+        datasheet_as_link: MFP
+        title: 'KiBot variants example'
+        highlight_empty: false
+
+  - name: ibom
+    comment: 'Prototype mounting guide'
+    type: ibom
+    dir: BoM
+    options:
+      layer_view: F
+
+  - name: 'print_sch'
+    comment: "Schematic PDF"
+    type: pdf_sch_print
+    dir: Schematic
+
+  - name: gerbers
+    comment: Gerbers
+    type: gerber
+    dir: Gerbers
+    layers:
+      - copper
+      - Edge.Cuts
+      - F.SilkS
+      - B.SilkS
+      - F.Mask
+      - B.Mask
+      - F.Paste
+      - F.Adhes
+      - F.Fab
+      - F.CrtYd
+      - Dwgs.User
+
+  - name: drill
+    comment: Drill files
+    type: excellon
+    dir: Drill
+    options:
+      map:
+        type: pdf
+      pth_and_npth_single_file: false
+
+  - name: position
+    comment: Pick & Place
+    type: position
+    dir: Position
+    options:
+      separate_files_for_front_and_back: false
+
+  - name: print_pdf_l1
+    comment: "PDF for PCB top layer"
+    type: pdf_pcb_print
+    dir: PCB
+    layers: [ F.Cu, Dwgs.User ]
+
+  - name: print_pdf_l2
+    comment: "PDF for PCB GND plane"
+    type: pdf_pcb_print
+    dir: PCB
+    layers: [ GND.Cu, Dwgs.User ]
+
+  - name: print_pdf_l3
+    comment: "PDF for PCB power plane"
+    type: pdf_pcb_print
+    dir: PCB
+    layers: [ Power.Cu, Dwgs.User ]
+
+  - name: print_pdf_l4
+    comment: "PDF for PCB bottom layer"
+    type: pdf_pcb_print
+    dir: PCB
+    layers: [ B.Cu, Dwgs.User ]
+
+  - name: board_top
+    comment: "Top layer view"
+    type: pcbdraw
+    dir: PCB
+    options:
+      format: jpg
+      dpi: 300
+
+  - name: board_bottom
+    comment: "Bottom layer view"
+    type: pcbdraw
+    dir: PCB
+    options:
+      format: jpg
+      dpi: 300
+      bottom: true
+
+  - name: 3D
+    comment: "STEP 3D model"
+    type: step
+    dir: 3D
+
