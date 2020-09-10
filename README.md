@@ -207,12 +207,13 @@ USB variant
 Excluded components are listed as DNF in a separated list. Note we could also remove them.
 
 Default variant
-[![Default variant](https://raw.githubusercontent.com/INTI-CMNB/kibot_variants_arduprog/master/images/t1-bom.png)](https://raw.githubusercontent.com/INTI-CMNB/kibot_variants_arduprog/master/images/t1-bom.html)
+[![Default variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-bom.png)](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-bom.html)
 
 XTAL variant
-[![Default variant](https://raw.githubusercontent.com/INTI-CMNB/kibot_variants_arduprog/master/images/t1-bom_XTAL.png)](https://raw.githubusercontent.com/INTI-CMNB/kibot_variants_arduprog/master/images/t1-bom_XTAL.html)
+[![Default variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-bom_XTAL.png)](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-bom_XTAL.html)
 
 USB variant
-[![Default variant](https://raw.githubusercontent.com/INTI-CMNB/kibot_variants_arduprog/master/images/t1-bom_USB.png)](https://raw.githubusercontent.com/INTI-CMNB/kibot_variants_arduprog/master/images/t1-bom_USB.html)
+[![Default variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-bom_USB.png)](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-bom_USB.html)
+
 
 
