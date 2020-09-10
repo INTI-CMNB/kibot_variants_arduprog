@@ -39,7 +39,7 @@ The best way to explain how to use it is using an example.
 We start with an hypothetic design: the *programmer* section of the [Arduino UNO R3](https://content.arduino.cc/assets/UNO-TH_Rev3e_sch.pdf).
 The schematic is the following:
 
-[![Schematic](https://raw.githubusercontent.com/INTI-CMNB/kibot_variants_arduprog/master/images/schematic.jpg)](https://raw.githubusercontent.com/INTI-CMNB/kibot_variants_arduprog/master/images/schematic.pdf)
+[![Schematic](https://inti-cmnb.github.io/kibot_variants_arduprog/images/schematic.jpg)](https://inti-cmnb.github.io/kibot_variants_arduprog/images/schematic.pdf)
 
 This is basically an ATMega8U2 used as a bridge between USB and the Arduino UNO serial port.
 So we will assume this board is useful. We'll also assume we have three possible uses:
@@ -78,7 +78,7 @@ Now we know what to use we'll add the *Config* field to the mentioned components
 To make it faster we can add it to one component, lets say to J4, and then use the *Tools -> Edit symbol fields* menu option.
 Here is what we should have in the *Config* field:
 
-![Symbol fields dialog](https://raw.githubusercontent.com/INTI-CMNB/kibot_variants_arduprog/master/images/SymbolFields.png)
+![Symbol fields dialog](https://inti-cmnb.github.io/kibot_variants_arduprog/images/SymbolFields.png)
 
 This is all we need to add to the schematic. Now is time to configure KiBot.
 
@@ -193,13 +193,13 @@ Here is what we get, you can download the results obtained on GitHub CI/CD Actio
 Excluded components are marked with a cross:
 
 Default variant
-[![Default variant](https://raw.githubusercontent.com/INTI-CMNB/kibot_variants_arduprog/master/images/t1-schematic.png)](https://raw.githubusercontent.com/INTI-CMNB/kibot_variants_arduprog/master/images/t1-schematic.pdf)
+[![Default variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-schematic.png)](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-schematic.pdf)
 
 XTAL variant
-[![XTAL variant](https://raw.githubusercontent.com/INTI-CMNB/kibot_variants_arduprog/master/images/t1-schematic_XTAL.png)](https://raw.githubusercontent.com/INTI-CMNB/kibot_variants_arduprog/master/images/t1-schematic_XTAL.pdf)
+[![XTAL variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-schematic_XTAL.png)](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-schematic_XTAL.pdf)
 
 USB variant
-[![USB variant](https://raw.githubusercontent.com/INTI-CMNB/kibot_variants_arduprog/master/images/t1-schematic_USB.png)](https://raw.githubusercontent.com/INTI-CMNB/kibot_variants_arduprog/master/images/t1-schematic_USB.pdf)
+[![USB variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-schematic_USB.png)](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-schematic_USB.pdf)
 
 
 ## Bill of Materials (HTML and XLSX)
