@@ -1,5 +1,7 @@
 # KiBot variants example
 
+![KiBot variants](https://inti-cmnb.github.io/kibot_variants_arduprog/images/kibot_variants.png)
+
 This is an example of how to use variants with [KiBot](https://github.com/INTI-CMNB/KiBot).
 
 ## Index
