@@ -333,12 +333,12 @@ Y1      16MHz                Crystal_SMD_Abracon_ABM3-2Pin_5.0x3.2mm     158.927
 
 ## 3D Model
 
-Default variant
+- Default variant
 [![Default variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/STEP_default.jpg)](https://inti-cmnb.github.io/kibot_variants_arduprog/images/STEP_default.png)
 
-XTAL variant
+- XTAL variant
 [![Default variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/STEP_XTAL.jpg)](https://inti-cmnb.github.io/kibot_variants_arduprog/images/STEP_XTAL.png)
 
-USB variant
+- USB variant
 [![Default variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/STEP_USB.jpg)](https://inti-cmnb.github.io/kibot_variants_arduprog/images/STEP_USB.png)
 
