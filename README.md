@@ -9,10 +9,10 @@ This is an example of how to use variants with [KiBot](https://github.com/INTI-C
 * [Example](#Example)
 * [**Results**](#Results)
   * [Schematic PDF](#Schematic-PDF)
-  * [Bill of Materials](Bill-of-Materials)
-  * [Gerbers](Gerbers)
-  * [Position](Position)
-  * [3D Model](3D-Model)
+  * [Bill of Materials](#Bill-of-Materials)
+  * [Gerbers](#Gerbers)
+  * [Position](#Position)
+  * [3D Model](#3D-Model)
 
 ## Definition
 
