@@ -234,3 +234,14 @@ XTAL variant
 USB variant
 [![Default variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/gerbers_USB.png)](https://inti-cmnb.github.io/kibot_variants_arduprog/images/gerbers_USB_big.png)
 
+
+## Position
+
+Here only the fitted components are included in the pick and place file:
+
+- [Default variant](images/t1-both_pos.txt)
+- [XTAL variant](images/t1-both_pos_XTAL.txt)
+- [USB variant](images/t1-both_pos_USB.txt)
+
+
+
