@@ -239,7 +239,7 @@ USB variant
 
 Here only the fitted components are included in the pick and place file:
 
-- [Default variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-both_pos.txt)
+- Default variant
 ```
 ### Module positions - created on Thu 10 Sep 2020 20:10:57  ###
 ### Printed by KiBot
@@ -263,7 +263,7 @@ R7     1K                   R_0805_2012Metric                           144.7800
 U1     ATmega8U2-AU         TQFP-32_7x7mm_P0.8mm                        154.4320   -85.8520   270.0000   top
 ## End
 ```
-- [XTAL variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-both_pos_XTAL.txt)
+- XTAL variant
 ```
 ### Module positions - created on Thu 10 Sep 2020 20:11:59  ###
 ### Printed by KiBot
@@ -326,5 +326,14 @@ Y1      16MHz                Crystal_SMD_Abracon_ABM3-2Pin_5.0x3.2mm     158.927
 ## End
 ```
 
+## 3D Model (STEP)
 
+Default variant
+[![Default variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/STEP_default.jpg)](https://inti-cmnb.github.io/kibot_variants_arduprog/images/STEP_default.png)
+
+XTAL variant
+[![Default variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/STEP_XTAL.jpg)](https://inti-cmnb.github.io/kibot_variants_arduprog/images/STEP_XTAL.png)
+
+USB variant
+[![Default variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/STEP_USB.jpg)](https://inti-cmnb.github.io/kibot_variants_arduprog/images/STEP_USB.png)
 
