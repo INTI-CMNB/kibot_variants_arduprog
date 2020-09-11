@@ -220,3 +220,17 @@ The XLSX files contain the same information, arranged a little bit different, he
 
 [![Default variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-bom_USB_xlsx.png)](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-bom_USB.xlsx)
 
+
+## Gerbers
+
+Excluded components are marked with a cross in the *.Fab layer. Their solder paste and adhesive glue is removed from *.Paste and *.Adhes:
+
+Default variant
+[![Default variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/gerbers_default.png)](https://inti-cmnb.github.io/kibot_variants_arduprog/images/gerbers_default_big.png)
+
+XTAL variant
+[![Default variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/gerbers_XTAL.png)](https://inti-cmnb.github.io/kibot_variants_arduprog/images/gerbers_XTAL_big.png)
+
+USB variant
+[![Default variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/gerbers_USB.png)](https://inti-cmnb.github.io/kibot_variants_arduprog/images/gerbers_USB_big.png)
+
