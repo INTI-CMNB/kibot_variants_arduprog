@@ -7,7 +7,8 @@ This is an example of how to use variants with [KiBot](https://github.com/INTI-C
 * [Definition](#Definition)
 * [Implementation](#Implementation)
 * [Example](#Example)
-* [**Result**](#Results)
+* [**Results**](#Results)
+  * [Schematic PDF](#Schematic PDF)
 
 ## Definition
 
