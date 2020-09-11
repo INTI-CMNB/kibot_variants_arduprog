@@ -130,6 +130,12 @@ outputs:
     dir: PCB
     layers: [ B.Cu, Dwgs.User ]
 
+  - name: print_fab
+    comment: "PDF to show fab layers"
+    type: pdf_pcb_print
+    dir: PCB
+    layers: [ F.Fab, F.Paste, F.Adhes, Dwgs.User ]
+
   - name: board_top
     comment: "Top layer view"
     type: pcbdraw
