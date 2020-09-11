@@ -197,13 +197,16 @@ Here is what we get, you can download the results obtained on GitHub CI/CD Actio
 
 Excluded components are marked with a cross:
 
-Default variant
+- Default variant
+
 [![Default variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-schematic.png)](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-schematic.pdf)
 
-XTAL variant
+- XTAL variant
+
 [![XTAL variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-schematic_XTAL.png)](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-schematic_XTAL.pdf)
 
-USB variant
+- USB variant
+
 [![USB variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-schematic_USB.png)](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-schematic_USB.pdf)
 
 
@@ -211,13 +214,16 @@ USB variant
 
 Excluded components are listed as DNF in a separated list. Note we could also remove them.
 
-Default variant
+- Default variant
+
 [![Default variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-bom.png)](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-bom.html)
 
-XTAL variant
+- XTAL variant
+
 [![Default variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-bom_XTAL.png)](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-bom_XTAL.html)
 
-USB variant
+- USB variant
+
 [![Default variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-bom_USB.png)](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-bom_USB.html)
 
 
@@ -230,13 +236,16 @@ The XLSX files contain the same information, arranged a little bit different, he
 
 Excluded components are marked with a cross in the *.Fab layer. Their solder paste and adhesive glue is removed from *.Paste and *.Adhes:
 
-Default variant
+- Default variant
+
 [![Default variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/gerbers_default.png)](https://inti-cmnb.github.io/kibot_variants_arduprog/images/gerbers_default_big.png)
 
-XTAL variant
+- XTAL variant
+
 [![Default variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/gerbers_XTAL.png)](https://inti-cmnb.github.io/kibot_variants_arduprog/images/gerbers_XTAL_big.png)
 
-USB variant
+- USB variant
+
 [![Default variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/gerbers_USB.png)](https://inti-cmnb.github.io/kibot_variants_arduprog/images/gerbers_USB_big.png)
 
 
@@ -334,11 +343,14 @@ Y1      16MHz                Crystal_SMD_Abracon_ABM3-2Pin_5.0x3.2mm     158.927
 ## 3D Model
 
 - Default variant
+
 [![Default variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/STEP_default.jpg)](https://inti-cmnb.github.io/kibot_variants_arduprog/images/STEP_default.png)
 
 - XTAL variant
+
 [![Default variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/STEP_XTAL.jpg)](https://inti-cmnb.github.io/kibot_variants_arduprog/images/STEP_XTAL.png)
 
 - USB variant
+
 [![Default variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/STEP_USB.jpg)](https://inti-cmnb.github.io/kibot_variants_arduprog/images/STEP_USB.png)
 
