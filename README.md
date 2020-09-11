@@ -239,9 +239,9 @@ USB variant
 
 Here only the fitted components are included in the pick and place file:
 
-- [Default variant](images/t1-both_pos.txt)
-- [XTAL variant](images/t1-both_pos_XTAL.txt)
-- [USB variant](images/t1-both_pos_USB.txt)
+- [Default variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-both_pos.txt)
+- [XTAL variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-both_pos_XTAL.txt)
+- [USB variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-both_pos_USB.txt)
 
 
 
