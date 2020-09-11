@@ -240,8 +240,91 @@ USB variant
 Here only the fitted components are included in the pick and place file:
 
 - [Default variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-both_pos.txt)
+```
+### Module positions - created on Thu 10 Sep 2020 20:10:57  ###
+### Printed by KiBot
+## Unit = mm, Angle = deg.
+## Side : both
+# Ref   Val                  Package                                     PosX       PosY       Rot        Side
+C1     47uF                 CP_Elec_8x10                                130.8354   -94.8944   270.0000   top
+C2     100nF                C_0805_2012Metric                           123.0000   -90.9000   0.0000     top
+C5     1uF                  C_0805_2012Metric                           163.3220   -89.1540   270.0000   top
+C6     100nF                C_0805_2012Metric                           162.3822   -82.0674   90.0000    top
+C7     100nF                C_0805_2012Metric                           153.9748   -78.8670   0.0000     top
+C8     100nF                C_0805_2012Metric                           144.7546   -78.9686   90.0000    top
+D1     CD1206-S01575        D_1206_3216Metric                           162.8140   -96.7740   90.0000    top
+D2     LED                  LED_0805_2012Metric                         147.3200   -74.9500   90.0000    top
+D3     LED                  LED_0805_2012Metric                         144.7800   -74.9500   90.0000    top
+J1     Barrel_Jack_Switch   BarrelJack_CLIFF_FC681465S_SMT_Horizontal   126.1000   -81.2000   0.0000     top
+R4     10K                  R_0805_2012Metric                           159.0040   -95.7580   90.0000    top
+R5     1K                   R_0805_2012Metric                           144.7546   -82.8040   270.0000   top
+R6     1K                   R_0805_2012Metric                           147.3200   -70.1748   270.0000   top
+R7     1K                   R_0805_2012Metric                           144.7800   -70.1748   270.0000   top
+U1     ATmega8U2-AU         TQFP-32_7x7mm_P0.8mm                        154.4320   -85.8520   270.0000   top
+## End
+```
 - [XTAL variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-both_pos_XTAL.txt)
-- [USB variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-both_pos_USB.txt)
+```
+### Module positions - created on Thu 10 Sep 2020 20:11:59  ###
+### Printed by KiBot
+## Unit = mm, Angle = deg.
+## Side : both
+# Ref   Val                  Package                                     PosX       PosY       Rot        Side
+C1     47uF                 CP_Elec_8x10                                130.8354   -94.8944   270.0000   top
+C2     100nF                C_0805_2012Metric                           123.0000   -90.9000   0.0000     top
+C3     22pF                 C_0805_2012Metric                           162.2600   -75.1160   270.0000   top
+C4     22pF                 C_0805_2012Metric                           155.9100   -75.1160   270.0000   top
+C5     1uF                  C_0805_2012Metric                           163.3220   -89.1540   270.0000   top
+C6     100nF                C_0805_2012Metric                           162.3822   -82.0674   90.0000    top
+C7     100nF                C_0805_2012Metric                           153.9748   -78.8670   0.0000     top
+C8     100nF                C_0805_2012Metric                           144.7546   -78.9686   90.0000    top
+D1     CD1206-S01575        D_1206_3216Metric                           162.8140   -96.7740   90.0000    top
+D2     LED                  LED_0805_2012Metric                         147.3200   -74.9500   90.0000    top
+D3     LED                  LED_0805_2012Metric                         144.7800   -74.9500   90.0000    top
+J1     Barrel_Jack_Switch   BarrelJack_CLIFF_FC681465S_SMT_Horizontal   126.1000   -81.2000   0.0000     top
+R3     1M                   R_0805_2012Metric                           158.9580   -75.8780   180.0000   top
+R4     10K                  R_0805_2012Metric                           159.0040   -95.7580   90.0000    top
+R5     1K                   R_0805_2012Metric                           144.7546   -82.8040   270.0000   top
+R6     1K                   R_0805_2012Metric                           147.3200   -70.1748   270.0000   top
+R7     1K                   R_0805_2012Metric                           144.7800   -70.1748   270.0000   top
+U1     ATmega8U2-AU         TQFP-32_7x7mm_P0.8mm                        154.4320   -85.8520   270.0000   top
+Y1     16MHz                Crystal_SMD_Abracon_ABM3-2Pin_5.0x3.2mm     158.9278   -70.0278   180.0000   top
+## End
+```
+- USB variant
+```
+### Module positions - created on Thu 10 Sep 2020 20:11:27  ###
+### Printed by KiBot
+## Unit = mm, Angle = deg.
+## Side : both
+# Ref   Val                  Package                                     PosX       PosY       Rot        Side
+C1      47uF                 CP_Elec_8x10                                130.8354   -94.8944   270.0000   top
+C2      100nF                C_0805_2012Metric                           123.0000   -90.9000   0.0000     top
+C3      22pF                 C_0805_2012Metric                           162.2600   -75.1160   270.0000   top
+C4      22pF                 C_0805_2012Metric                           155.9100   -75.1160   270.0000   top
+C5      1uF                  C_0805_2012Metric                           163.3220   -89.1540   270.0000   top
+C6      100nF                C_0805_2012Metric                           162.3822   -82.0674   90.0000    top
+C7      100nF                C_0805_2012Metric                           153.9748   -78.8670   0.0000     top
+C8      100nF                C_0805_2012Metric                           144.7546   -78.9686   90.0000    top
+D1      CD1206-S01575        D_1206_3216Metric                           162.8140   -96.7740   90.0000    top
+D2      LED                  LED_0805_2012Metric                         147.3200   -74.9500   90.0000    top
+D3      LED                  LED_0805_2012Metric                         144.7800   -74.9500   90.0000    top
+F1      MF-MSMF050-2         R_1812_4532Metric                           167.8940   -77.2160   0.0000     top
+FB1     BLM21PG221SN1D       R_0805_2012Metric                           167.8940   -90.6780   180.0000   top
+J1      Barrel_Jack_Switch   BarrelJack_CLIFF_FC681465S_SMT_Horizontal   126.1000   -81.2000   0.0000     top
+R1      22R                  R_0805_2012Metric                           166.3700   -86.1060   0.0000     top
+R2      22R                  R_0805_2012Metric                           166.3700   -83.8200   0.0000     top
+R3      1M                   R_0805_2012Metric                           158.9580   -75.8780   180.0000   top
+R4      10K                  R_0805_2012Metric                           159.0040   -95.7580   90.0000    top
+R5      1K                   R_0805_2012Metric                           144.7546   -82.8040   270.0000   top
+R6      1K                   R_0805_2012Metric                           147.3200   -70.1748   270.0000   top
+R7      1K                   R_0805_2012Metric                           144.7800   -70.1748   270.0000   top
+RV1     CG0603MLC-05E        R_0603_1608Metric                           170.4340   -87.3505   270.0000   top
+RV2     CG0603MLC-05E        R_0603_1608Metric                           170.4340   -82.3214   90.0000    top
+U1      ATmega8U2-AU         TQFP-32_7x7mm_P0.8mm                        154.4320   -85.8520   270.0000   top
+Y1      16MHz                Crystal_SMD_Abracon_ABM3-2Pin_5.0x3.2mm     158.9278   -70.0278   180.0000   top
+## End
+```
 
 
 
