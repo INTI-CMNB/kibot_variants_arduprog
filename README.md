@@ -216,4 +216,7 @@ USB variant
 [![Default variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-bom_USB.png)](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-bom_USB.html)
 
 
+The XLSX files contain the same information, arranged a little bit different, here is the USB variant:
+
+[![Default variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-bom_USB_xlsx.png)](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-bom_USB.xlsx)
 
