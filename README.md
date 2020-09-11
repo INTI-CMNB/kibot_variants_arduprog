@@ -9,6 +9,10 @@ This is an example of how to use variants with [KiBot](https://github.com/INTI-C
 * [Example](#Example)
 * [**Results**](#Results)
   * [Schematic PDF](#Schematic-PDF)
+  * [Bill of Materials](Bill-of-Materials)
+  * [Gerbers](Gerbers)
+  * [Position](Position)
+  * [3D Model](3D-Model)
 
 ## Definition
 
@@ -203,7 +207,7 @@ USB variant
 [![USB variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-schematic_USB.png)](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-schematic_USB.pdf)
 
 
-## Bill of Materials (HTML and XLSX)
+## Bill of Materials
 
 Excluded components are listed as DNF in a separated list. Note we could also remove them.
 
@@ -327,7 +331,7 @@ Y1      16MHz                Crystal_SMD_Abracon_ABM3-2Pin_5.0x3.2mm     158.927
 ## End
 ```
 
-## 3D Model (STEP)
+## 3D Model
 
 Default variant
 [![Default variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/STEP_default.jpg)](https://inti-cmnb.github.io/kibot_variants_arduprog/images/STEP_default.png)
