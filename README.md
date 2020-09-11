@@ -27,7 +27,7 @@ Typical applications are:
 - Testing purposes
 
 Currently KiBot can handle which components are soldered, not different values.
-This functionality will be added in the future.
+Support for different values will be added in the future.
 
 
 ## Implementation
@@ -50,23 +50,23 @@ The schematic is the following:
 This is basically an ATMega8U2 used as a bridge between USB and the Arduino UNO serial port.
 So we will assume this board is useful. We'll also assume we have three possible uses:
 
-- The full board with USB support. Will name it **USB** variant.
-- A version of the board that we want to use as a plain microcontroller. So we remove the USB. Will name it **XTAL** variant.
-- An even more modest version where we use the internal clock oscillator and we can remove the crystal. Will name it **default** variant.
+- The full board with USB support. We'll name it **USB** variant.
+- A version of the board that we want to use as a plain microcontroller. So we remove the USB. We'll name it **XTAL** variant.
+- An even more modest version where we use the internal clock oscillator and we can remove the crystal. We'll name it **default** variant.
 
 Additionally:
 
-- In the USB version we want to remove the ICSP1 connector. We will flash the CPU in-house and the user won't need to do it. ICPS1 will be solded for the other two variants.
+- In the USB version we want to remove the ICSP1 connector. We'll flash the CPU in-house and the user won't need to do it. ICPS1 will be solded for the other two variants.
 - The J4 connector is completely optional. It won't be included in any variant.
 
 The first step is to choose a variant mechanism. For this example we will use the [KiBoM](https://github.com/SchrodingersGat/KiBoM) style.
 This style puts more information inside the schematic, so you need to provide less information from outside.
 
-Now we choose a format we must add the corresponding *tags*. We can identify four groups of components here:
+Now that we chose a format we must add the corresponding *tags*. We can identify four groups of components here:
 
 - The USB components (J2, F1, R1, R2, RV1, RV2 and FB1). Used only for the **USB** variant.
 - The ICSP1 connector (J5). Excluded from the **USB** variant.
-- The crystal components (R3, Y1, C3, C4). Used only for the **USB** and **XTAL** variant.
+- The crystal components (R3, Y1, C3, C4). Used only for the **USB** and **XTAL** variants.
 - The 2x2M connector (J4). Never used.
 
 To mark components that will be added to the board only for certain variant KiBoM uses **+VARIANT**.
@@ -80,7 +80,7 @@ We'll use the default *Config* field. So lets see what we'll use for each group.
   So what we use is **+USB,+XTAL** this makes the components available for both variants.
 - The J4 case is handled in a different way. KiBoM filters removes any component mentioning the **DNF** word in the config. So we can just use it.
 
-Now we know what to use we'll add the *Config* field to the mentioned components.
+Now that we know what to use we'll add the *Config* field to the mentioned components.
 To make it faster we can add it to one component, lets say to J4, and then use the *Tools -> Edit symbol fields* menu option.
 Here is what we should have in the *Config* field:
 
@@ -151,6 +151,7 @@ variants:
 
 This is all we need to define the variants. Of course our config file must define what to do with the variants.
 But this document is about the variants, we won't focuse on the rest.
+You can see the whole configuration file [here](ardu_prog.kibot.yaml).
 
 What now? How can we tell KiBot what variant to use?
 There are three methodes:
@@ -175,7 +176,7 @@ kibot -s all -d USB -g variant=USB bom_html
 
 And we'll get a different BoM in `USB/BoM/t1-bom_USB.html`.
 
-The CI/CD workflow for this repo runs the ERC and DRC checks and them generates all the configured outputs for the three variants.
+The CI/CD workflow for this repo runs the ERC and DRC checks and then generates all the configured outputs for the three variants.
 The commands used are approximately these:
 
 ```bash
@@ -192,7 +193,8 @@ All files are stored in the `Generated` folder.
 
 # Results
 
-Here is what we get, you can download the results obtained on GitHub CI/CD Actions from [here](https://github.com/INTI-CMNB/kibot_variants_arduprog/suites/1173923934/artifacts/17126083).
+Here is what we get, you can download the results obtained on GitHub CI/CD Actions from [here](https://github.com/INTI-CMNB/kibot_variants_arduprog/suites/1178852123/artifacts/17235638).
+Click on the images to get a larger image or the generated document.
 
 ## Schematic PDF
 
@@ -360,6 +362,8 @@ Y1      16MHz                Crystal_SMD_Abracon_ABM3-2Pin_5.0x3.2mm     158.927
 ```
 
 ## 3D Model
+
+Excluded components are removed from the 3D model:
 
 - Default variant
 
