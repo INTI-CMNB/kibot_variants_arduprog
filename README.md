@@ -10,6 +10,7 @@ This is an example of how to use variants with [KiBot](https://github.com/INTI-C
 * [**Results**](#Results)
   * [Schematic PDF](#Schematic-PDF)
   * [Bill of Materials](#Bill-of-Materials)
+  * [PCB PDF](#PCB-PDF)
   * [Gerbers](#Gerbers)
   * [Position](#Position)
   * [3D Model](#3D-Model)
@@ -230,6 +231,24 @@ Excluded components are listed as DNF in a separated list. Note we could also re
 The XLSX files contain the same information, arranged a little bit different, here is the USB variant:
 
 [![Default variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-bom_USB_xlsx.png)](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-bom_USB.xlsx)
+
+
+## PCB PDF
+
+Excluded components are marked with a cross in the *.Fab layer. Their solder paste and adhesive glue is removed from *.Paste and *.Adhes.
+The following PDFs were gnerated including F.Fab, F.Paste, F.Adhes and Dwgs.User:
+
+- Default variant
+
+[![Default variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-F_Fab+F_Paste+F_Adhes+Dwgs_User.jpg)](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-F_Fab+F_Paste+F_Adhes+Dwgs_User.pdf)
+
+- XTAL variant
+
+[![Default variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-F_Fab+F_Paste+F_Adhes+Dwgs_User_USB.jpg)](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-F_Fab+F_Paste+F_Adhes+Dwgs_User_USB.pdf)
+
+- USB variant
+
+[![Default variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-F_Fab+F_Paste+F_Adhes+Dwgs_User_XTAL.jpg)](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-F_Fab+F_Paste+F_Adhes+Dwgs_User_XTAL.pdf)
 
 
 ## Gerbers
