@@ -5,9 +5,32 @@
 
 section
 {
- width: 830px
+ width:85%;
+ right: -13%;
 }
 #banner
 {
- margin-right:-142px
+ right:1%;
+ margin-right:0px;
+ .fork
+ {
+  left:15%;
+  margin-left:0;
+ }
+}
+.wrapper
+{
+ width:95%
+}
+nav
+{
+ width: 14%;
+ left:0;
+ margin-left:0;
+}
+footer
+{
+ width: 14%;
+ left:0;
+ margin-left:0;
 }
