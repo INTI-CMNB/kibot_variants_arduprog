@@ -16,8 +16,9 @@ This is an example of how to use variants with [KiBot](https://github.com/INTI-C
   * [Gerbers](#Gerbers)
   * [Position](#Position)
   * [3D Model](#3D-Model)
+* [Changing values](#Changing-values)
 
-## Definition
+# Definition
 
 In the KiBot context a variant is what is usually known as an *assembly variant*.
 So the idea is that you have **one** PCB, but various different *variants* (*flavors*) of the product.
@@ -28,11 +29,11 @@ Typical applications are:
 - Support for different normatives
 - Testing purposes
 
-Currently KiBot can handle which components are soldered, not different values.
-Support for different values will be added in the future.
+Currently KiBot can handle not only which components are soldered, but also different values.
+The support for different values is currently experimental.
 
 
-## Implementation
+# Implementation
 
 To create a variant you must add specific fields to the components in the schematic.
 Currently KiBot supports two methodes:
@@ -41,7 +42,7 @@ Currently KiBot supports two methodes:
 - **IBoM style**: one field assigns the component to a group, you provide lists to exclude or include certain groups.
 
 
-## Example
+# Example
 
 The best way to explain how to use it is using an example.
 We start with an hypothetic design: the *programmer* section of the [Arduino UNO R3](https://content.arduino.cc/assets/UNO-TH_Rev3e_sch.pdf).
@@ -378,4 +379,77 @@ Excluded components are removed from the 3D model:
 - USB variant
 
 [![Default variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/STEP_USB.jpg)](https://inti-cmnb.github.io/kibot_variants_arduprog/images/STEP_USB.png)
+
+
+# Changing values
+
+Variants can also affect any of the component fields. In order to overwrite one field value when a variant is selected you must define a field named `VARIANT:FIELD`.
+The value for this field will replace the value of the regular `FIELD` when the `VARIANT` is in use.
+
+Here is an example, if you have a resistor with a value of 1k and you want this value to change to 2k2 when the `test` variant is in use you just need to define a field named `test:value` and assign `2k2` to this field.
+
+To enable it you just need to add a `pre_transform` filter of the type `var_rename` to the variant performing the transformation. Suppose you have the following variants:
+
+```yaml
+variants:
+  - name: 'production'
+    comment: 'Production variant'
+    type: kibom
+    file_id: '_(PROD)'
+    variant: PROD
+
+  - name: 'development'
+    comment: 'Development variant'
+    type: kibom
+    file_id: '_(DEV)'
+    variant: DEV
+```
+
+And you want to both apply such a transformation you can define:
+
+```yaml
+filters:
+  - name: 'Variant rename'
+    type: var_rename
+    separator: ':'
+    variant_to_value: true
+
+variants:
+  - name: 'production'
+    comment: 'Production variant'
+    type: kibom
+    file_id: '_(PROD)'
+    variant: PROD
+    pre_transform: 'Variant rename'
+
+  - name: 'development'
+    comment: 'Development variant'
+    type: kibom
+    file_id: '_(DEV)'
+    variant: DEV
+    pre_transform: 'Variant rename'
+```
+
+The `separator` option controls which character is used to separate the `VARIANT` and the `FIELD` in the field name.
+
+The `variant_to_value` enables the conversion from fields named `VARIANT` to the component value when the variant is in use.
+
+To make things simpler you can use an internally defined filter called `_var_rename`. This is a `var_rename` filter with `:` as separator and `variant_to_value` disabled. Using it the configuration is simpler:
+
+```yaml
+variants:
+  - name: 'production'
+    comment: 'Production variant'
+    type: kibom
+    file_id: '_(PROD)'
+    variant: PROD
+    pre_transform: '_var_rename'
+
+  - name: 'development'
+    comment: 'Development variant'
+    type: kibom
+    file_id: '_(DEV)'
+    variant: DEV
+    pre_transform: '_var_rename'
+```
 
