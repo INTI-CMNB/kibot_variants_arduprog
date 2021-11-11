@@ -1,5 +1,8 @@
 #!/usr/bin/make
+
+ifeq ($(KIBOT),)
 KIBOT=kibot
+endif
 DEBUG=
 OUT_DIR=Generated
 
