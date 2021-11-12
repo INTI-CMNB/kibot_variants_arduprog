@@ -144,6 +144,16 @@ outputs:
       format: jpg
       dpi: 300
 
+  - name: board_top_filled
+    comment: "Top layer view with components"
+    type: pcbdraw
+    dir: PCB
+    options:
+      format: jpg
+      dpi: 300
+      show_components: all
+      output: '%f-%i%v-filled.%x'
+
   - name: board_bottom
     comment: "Bottom layer view"
     type: pcbdraw
@@ -153,6 +163,17 @@ outputs:
       dpi: 300
       bottom: true
 
+  - name: board_bottom_filled
+    comment: "Bottom layer view with components"
+    type: pcbdraw
+    dir: PCB
+    options:
+      format: jpg
+      dpi: 300
+      bottom: true
+      show_components: all
+      output: '%f-%i%v-filled.%x'
+      
   - name: 3D
     comment: "STEP 3D model"
     type: step
