@@ -1,6 +1,6 @@
 #!/usr/bin/make
-KIBOT=kibot
-DEBUG=
+KIBOT?=kibot
+DEBUG?=
 OUT_DIR=Generated
 
 all: erc drc ardu_prog
