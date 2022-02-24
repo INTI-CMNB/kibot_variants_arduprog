@@ -17,6 +17,7 @@ This is an example of how to use variants with [KiBot](https://github.com/INTI-C
   * [Position](#Position)
   * [3D Model](#3D-Model)
 * [Changing values](#Changing-values)
+* [A complete example](#A-complete-example)
 
 # Definition
 
@@ -453,3 +454,6 @@ variants:
     pre_transform: '_var_rename'
 ```
 
+# A complete example
+
+The configuration file used in this example can be found [here](https://github.com/INTI-CMNB/kibot_variants_arduprog/blob/master/ardu_prog.kibot.yaml).
