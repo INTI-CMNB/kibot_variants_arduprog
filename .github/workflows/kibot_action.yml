@@ -1,0 +1,37 @@
+name: "Variants demo generator"
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    paths:
+      - '*.sch'
+      - '*.kicad_pcb'
+      - '*.kibot.yaml'
+      - 'Makefile'
+      - '.github/workflows/kibot_action.yml'
+  pull_request:
+    paths:
+      - '*.sch'
+      - '*.kicad_pcb'
+      - '*.kibot.yaml'
+      - 'Makefile'
+      - '.github/workflows/kibot_action.yml'
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: INTI-CMNB/KiBot@v1
+      with:
+        # Required - kibot config file
+        config: ardu_prog.kibot.yaml
+        # optional - prefix to output defined in config
+        dir: output
+    - name: upload results
+      uses: actions/upload-artifact@v2
+      with:
+        name: output
+        path: output
