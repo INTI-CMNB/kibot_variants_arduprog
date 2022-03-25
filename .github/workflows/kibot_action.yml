@@ -20,45 +20,105 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  default:
+  ERC:
     runs-on: ubuntu-latest
+
     steps:
     - uses: actions/checkout@v2
+
+    - name: Run ERC
+      uses: INTI-CMNB/KiBot@v2
+      with:
+        dir: Generated
+        skip: run_drc
+        targets: __NONE__
+
+    - name: Retrieve results
+      uses: actions/upload-artifact@v2
+      with:
+        name: ERC_Output
+        path: Generated
+
+
+  DRC:
+    runs-on: ubuntu-latest
+    needs: ERC
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Run DRC
+      uses: INTI-CMNB/KiBot@v2
+      with:
+        dir: Generated
+        skip: run_erc
+        targets: __NONE__
+
+    - name: Retrieve results
+      uses: actions/upload-artifact@v1
+      with:
+        name: DRC_Output
+        path: Generated
+
+
+  default:
+    name: "Default variant"
+    runs-on: ubuntu-latest
+    needs: [ERC, DRC]
+
+    steps:
+    - uses: actions/checkout@v2
+
     - uses: INTI-CMNB/KiBot@v2
       with:
-        config: ardu_prog.kibot.yaml
         dir: default
         variant: default
+        skip: all
+
     - name: upload results
       uses: actions/upload-artifact@v2
       with:
         name: default_variant
         path: default
 
+
   USB:
+    name: "USB variant"
     runs-on: ubuntu-latest
+    needs: [ERC, DRC]
+
     steps:
     - uses: actions/checkout@v2
+
     - uses: INTI-CMNB/KiBot@v2
       with:
         config: ardu_prog.kibot.yaml
         dir: USB
         variant: USB
+        skip: all
+
     - name: upload results
       uses: actions/upload-artifact@v2
       with:
         name: USB_variant
         path: USB
 
+
   XTAL:
+    name: "XTAL variant"
     runs-on: ubuntu-latest
+    needs: [ERC, DRC]
+
     steps:
     - uses: actions/checkout@v2
+
     - uses: INTI-CMNB/KiBot@v2
       with:
         config: ardu_prog.kibot.yaml
         dir: XTAL
         variant: XTAL
+        skip: all
+
     - name: upload results
       uses: actions/upload-artifact@v2
       with:
