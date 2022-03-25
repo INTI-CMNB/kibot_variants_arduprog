@@ -92,7 +92,6 @@ jobs:
 
     - uses: INTI-CMNB/KiBot@v2
       with:
-        config: ardu_prog.kibot.yaml
         dir: USB
         variant: USB
         skip: all
@@ -114,7 +113,6 @@ jobs:
 
     - uses: INTI-CMNB/KiBot@v2
       with:
-        config: ardu_prog.kibot.yaml
         dir: XTAL
         variant: XTAL
         skip: all
