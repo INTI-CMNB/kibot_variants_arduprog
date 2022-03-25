@@ -27,8 +27,9 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Run ERC
-      uses: INTI-CMNB/KiBot@v2
+      uses: INTI-CMNB/KiBot@92fac3958665528621f09a5d8af0b92e8d88cc32
       with:
+        kicad: 5
         dir: Generated
         skip: run_drc
         targets: __NONE__
@@ -48,8 +49,9 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Run DRC
-      uses: INTI-CMNB/KiBot@v2
+      uses: INTI-CMNB/KiBot@92fac3958665528621f09a5d8af0b92e8d88cc32
       with:
+        kicad: 5
         dir: Generated
         skip: run_erc
         targets: __NONE__
@@ -69,8 +71,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - uses: INTI-CMNB/KiBot@v2
+    - uses: INTI-CMNB/KiBot@92fac3958665528621f09a5d8af0b92e8d88cc32
       with:
+        kicad: 5
         dir: default
         variant: default
         skip: all
@@ -90,8 +93,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - uses: INTI-CMNB/KiBot@v2
+    - uses: INTI-CMNB/KiBot@92fac3958665528621f09a5d8af0b92e8d88cc32
       with:
+        kicad: 5
         dir: USB
         variant: USB
         skip: all
@@ -111,8 +115,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - uses: INTI-CMNB/KiBot@v2
+    - uses: INTI-CMNB/KiBot@92fac3958665528621f09a5d8af0b92e8d88cc32
       with:
+        kicad: 5
         dir: XTAL
         variant: XTAL
         skip: all
