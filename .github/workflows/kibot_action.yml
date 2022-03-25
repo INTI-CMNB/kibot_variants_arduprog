@@ -26,10 +26,10 @@ jobs:
     - uses: actions/checkout@v2
     - uses: INTI-CMNB/KiBot@v1
       with:
-        # Required - kibot config file
         config: ardu_prog.kibot.yaml
-        # optional - prefix to output defined in config
         dir: output
+        schema: '*.sch'
+        board: '*.kicad_pcb'
     - name: upload results
       uses: actions/upload-artifact@v2
       with:
