@@ -3013,7 +3013,7 @@
   (symbol (lib_id "Device:Varistor") (at 100.33 119.38 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-00005f596a91)
-    (property "Reference" "RV2" (id 0) (at 102.87 118.11 0)
+    (property "Reference" "VR2" (id 0) (at 102.87 118.11 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "CG0603MLC-05E" (id 1) (at 102.87 120.65 0)
@@ -3132,7 +3132,7 @@
   (symbol (lib_id "Device:Varistor") (at 91.44 119.38 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-00005f5a461f)
-    (property "Reference" "RV1" (id 0) (at 85.09 119.38 0)
+    (property "Reference" "VR1" (id 0) (at 85.09 119.38 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "CG0603MLC-05E" (id 1) (at 74.93 123.19 0)
@@ -4521,12 +4521,6 @@
     (path "/00000000-0000-0000-0000-00005f6afc1d"
       (reference "R7") (unit 1) (value "1K") (footprint "Resistor_SMD:R_0805_2012Metric")
     )
-    (path "/00000000-0000-0000-0000-00005f5a461f"
-      (reference "RV1") (unit 1) (value "CG0603MLC-05E") (footprint "Resistor_SMD:R_0603_1608Metric")
-    )
-    (path "/00000000-0000-0000-0000-00005f596a91"
-      (reference "RV2") (unit 1) (value "CG0603MLC-05E") (footprint "Resistor_SMD:R_0603_1608Metric")
-    )
     (path "/00000000-0000-0000-0000-00005f5b39e3"
       (reference "TP2") (unit 1) (value "TestPoint") (footprint "TestPoint:TestPoint_Pad_D1.0mm")
     )
@@ -4550,6 +4544,12 @@
     )
     (path "/00000000-0000-0000-0000-00005f58d91d"
       (reference "U1") (unit 1) (value "ATmega8U2-AU") (footprint "Package_QFP:TQFP-32_7x7mm_P0.8mm")
+    )
+    (path "/00000000-0000-0000-0000-00005f5a461f"
+      (reference "VR1") (unit 1) (value "CG0603MLC-05E") (footprint "Resistor_SMD:R_0603_1608Metric")
+    )
+    (path "/00000000-0000-0000-0000-00005f596a91"
+      (reference "VR2") (unit 1) (value "CG0603MLC-05E") (footprint "Resistor_SMD:R_0603_1608Metric")
     )
     (path "/00000000-0000-0000-0000-00005f598bfc"
       (reference "Y1") (unit 1) (value "16MHz") (footprint "Crystal:Crystal_SMD_Abracon_ABM3-2Pin_5.0x3.2mm")
