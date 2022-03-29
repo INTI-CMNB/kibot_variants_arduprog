@@ -6,6 +6,7 @@ preflight:
   check_zone_fills: true
   run_erc: true
   run_drc: true
+  update_xml: true
   filters:
     - filter: 'We know some connectors extend outside the board'
       error: 'silk_over_copper'
