@@ -156,7 +156,6 @@ outputs:
     options:
       format: jpg
       dpi: 300
-      show_components: all
       output: '%f-%i%v-filled.%x'
 
   - name: board_bottom
@@ -176,7 +175,6 @@ outputs:
       format: jpg
       dpi: 300
       bottom: true
-      show_components: all
       output: '%f-%i%v-filled.%x'
       
   - name: 3D
