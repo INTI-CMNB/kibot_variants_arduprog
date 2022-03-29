@@ -182,3 +182,12 @@ outputs:
     type: step
     dir: 3D
 
+  - name: 3D_top_view
+    comment: "3D render from top"
+    type: render_3d
+    dir: 3D
+    options:
+      zoom: 4
+      rotate_x: 3
+      rotate_z: 3
+      ray_tracing: true
