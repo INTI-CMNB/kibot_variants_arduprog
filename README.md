@@ -367,7 +367,7 @@ Y1      16MHz                Crystal_SMD_Abracon_ABM3-2Pin_5.0x3.2mm     158.927
 
 ## 3D Model
 
-Excluded components are removed from the 3D model:
+Excluded components are removed from the 3D model (STEP file and 3D Viewer render):
 
 - Default variant
 
