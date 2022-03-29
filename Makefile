@@ -6,14 +6,23 @@ OUT_DIR=Generated
 all: erc drc ardu_prog
 
 erc:
-	$(KIBOT) $(DEBUG) -d $(OUT_DIR) -s run_drc -i
+	$(KIBOT) $(DEBUG) -d $(OUT_DIR) -s run_drc,update_xml -i
 
 drc:
-	$(KIBOT) $(DEBUG) -d $(OUT_DIR) -s run_erc -i
+	$(KIBOT) $(DEBUG) -d $(OUT_DIR) -s run_erc,update_xml -i
 
-ardu_prog:
-	$(KIBOT) $(DEBUG) -c ardu_prog.kibot.yaml -e t1.sch -d $(OUT_DIR)/default -g variant=default -s all
-	$(KIBOT) $(DEBUG) -c ardu_prog.kibot.yaml -e t1.sch -d $(OUT_DIR)/USB -g variant=USB -s all
-	$(KIBOT) $(DEBUG) -c ardu_prog.kibot.yaml -e t1.sch -d $(OUT_DIR)/XTAL -g variant=XTAL -s all
+netlist:
+	$(KIBOT) $(DEBUG) -d $(OUT_DIR) -s run_erc,run_drc -i
 
-.PHONY: ardu_prog erc drc
+var_default:
+	$(KIBOT) $(DEBUG) -d $(OUT_DIR)/default -g variant=default -s all
+
+var_usb:
+	$(KIBOT) $(DEBUG) -d $(OUT_DIR)/USB -g variant=USB -s all
+
+var_xtal:
+	$(KIBOT) $(DEBUG) -d $(OUT_DIR)/XTAL -g variant=XTAL -s all
+
+ardu_prog: netlist var_default var_usb var_xtal
+
+.PHONY: ardu_prog erc drc netlist var_default var_usb var_xtal
