@@ -5,6 +5,12 @@
   )
 
   (paper "A4")
+  (title_block
+    (rev "${git_hash}")
+    (company "Instituto Nacional de Tecnología Industrial")
+    (comment 4 "An example of KiBot variants")
+  )
+
   (layers
     (0 "F.Cu" signal)
     (1 "In1.Cu" power "GND.Cu")

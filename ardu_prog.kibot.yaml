@@ -11,7 +11,10 @@ preflight:
     - filter: 'We know some connectors extend outside the board'
       error: 'silk_over_copper'
       regex: 'clipped by solder mask'
-
+  set_text_variables:
+    - name: 'git_hash'
+      command: 'git log -1 --format="%h" $KIBOT_PCB_NAME'
+      before: 'Git:'
 
 variants:
   - name: 'default'
@@ -111,35 +114,28 @@ outputs:
     options:
       separate_files_for_front_and_back: false
 
-  - name: print_pdf_l1
-    comment: "PDF for PCB top layer"
-    type: pdf_pcb_print
+  - name: print_pdf
+    comment: "PDF for the PCB"
+    type: pcb_print
     dir: PCB
-    layers: [ F.Cu, Dwgs.User ]
-
-  - name: print_pdf_l2
-    comment: "PDF for PCB GND plane"
-    type: pdf_pcb_print
-    dir: PCB
-    layers: [ GND.Cu, Dwgs.User ]
-
-  - name: print_pdf_l3
-    comment: "PDF for PCB power plane"
-    type: pdf_pcb_print
-    dir: PCB
-    layers: [ Power.Cu, Dwgs.User ]
-
-  - name: print_pdf_l4
-    comment: "PDF for PCB bottom layer"
-    type: pdf_pcb_print
-    dir: PCB
-    layers: [ B.Cu, Dwgs.User ]
-
-  - name: print_fab
-    comment: "PDF to show fab layers"
-    type: pdf_pcb_print
-    dir: PCB
-    layers: [ F.Fab, F.Paste, F.Adhes, Dwgs.User ]
+    options:
+      force_edge_cuts: true
+      keep_temporal_files: true
+      title: "Arduino programmer KiBot demo"
+      sheet_reference_layout: pcb_print.kicad_wks
+      scaling: 2.0
+      pages:
+        - layers: [ F.Cu, F.SilkS, Dwgs.User ]
+          sheet: 'Top layer'
+        - layers: [ GND.Cu, Dwgs.User ]
+          sheet: 'GND plane'
+        - layers: [ Power.Cu, Dwgs.User ]
+          sheet: 'Power plane'
+        - layers: [ B.Cu, B.SilkS, Dwgs.User ]
+          sheet: 'Bottom layer'
+          mirror: true
+        - layers: [ F.Paste, F.Adhes, Dwgs.User, F.Fab ]
+          sheet: 'Fabrication layers'
 
   - name: board_top
     comment: "Top layer view"
