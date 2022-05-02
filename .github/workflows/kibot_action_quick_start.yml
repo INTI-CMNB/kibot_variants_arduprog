@@ -25,7 +25,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - uses: INTI-CMNB/KiBot@995bb705d9c91d418a48770c6c2aedb56a04da27
+    - uses: INTI-CMNB/KiBot@7ce13c2e38bf363984babb964786e99339772bdd
       with:
         quickstart: YES
 
