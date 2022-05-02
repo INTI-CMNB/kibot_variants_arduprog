@@ -1,0 +1,36 @@
+name: "Variants demo using GitHub actions and quick-start"
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    paths:
+      - '*.sch'
+      - '*.kicad_pcb'
+      - '*.kibot.yaml'
+      - '.github/workflows/kibot_action_quick_start.yml'
+  pull_request:
+    paths:
+      - '*.sch'
+      - '*.kicad_pcb'
+      - '*.kibot.yaml'
+      - '.github/workflows/kibot_action_quick_start.yml'
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  quick:
+    name: "Quick Start (action)"
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - uses: INTI-CMNB/KiBot@6123ad3b5901877cb85b6fdc0d327196921fa717
+      with:
+        quickstart: YES
+
+    - name: upload results
+      uses: actions/upload-artifact@v2
+      with:
+        name: Automatic_outputs
+        path: Generated
