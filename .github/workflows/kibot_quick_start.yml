@@ -23,7 +23,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Run ERC
+    - name: Quick Start
       run: |
         kibot --quick-start
 
