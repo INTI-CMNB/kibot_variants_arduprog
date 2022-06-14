@@ -23,14 +23,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - name: Get repo
+      uses: actions/checkout@v2
 
-    - uses: INTI-CMNB/KiBot@v2_k6
+    - name: Run KiBot
+      uses: INTI-CMNB/KiBot@v2_dk6
       with:
         quickstart: YES
 
-    - name: upload results
+    - name: Upload results
       uses: actions/upload-artifact@v2
       with:
         name: Automatic_outputs
         path: Generated
+
+    - name: Deploy navigate results
+      uses: JamesIves/github-pages-deploy-action@v4.3.3
+      with:
+        branch: main
+        folder: Generated
+        repository-name: INTI-CMNB/kibot_variants_arduprog_site
+        token: ${{ secrets.TOKEN }}
