@@ -1,6 +1,6 @@
 name: "Variants demo using GitHub actions"
 
-# Controls when the action will run.
+# Controls when the action will run
 on:
   push:
     paths:
