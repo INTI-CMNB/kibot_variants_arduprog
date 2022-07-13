@@ -27,8 +27,6 @@ jobs:
       with:
         config: ardu_prog.kibot.yaml
         dir: output
-        schema: '*.sch'
-        board: '*.kicad_pcb'
     - name: upload results
       uses: actions/upload-artifact@v2
       with:
