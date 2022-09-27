@@ -18,7 +18,7 @@ on:
 jobs:
   quick:
     runs-on: ubuntu-latest
-    container: setsoft/kicad_auto:dev_k6
+    container: ghcr.io/inti-cmnb/kicad6_auto:latest
 
     steps:
     - uses: actions/checkout@v2
