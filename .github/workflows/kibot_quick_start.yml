@@ -46,6 +46,7 @@ jobs:
       uses: actions/download-artifact@v2
       with:
         name: Automatic_outputs
+        path: Generated
 
     - name: Deploy navigate results
       uses: JamesIves/github-pages-deploy-action@v4.3.3
