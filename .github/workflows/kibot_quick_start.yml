@@ -18,7 +18,7 @@ on:
 jobs:
   quick:
     runs-on: ubuntu-latest
-    container: ghcr.io/inti-cmnb/kicad6_auto:latest
+    container: ghcr.io/inti-cmnb/kicad6_auto_full:latest
 
     steps:
     - uses: actions/checkout@v3
@@ -35,3 +35,11 @@ jobs:
       with:
         name: Automatic_outputs
         path: Generated
+
+    - name: Deploy navigate results
+      uses: JamesIves/github-pages-deploy-action@v4.3.3
+      with:
+        branch: main
+        folder: Generated
+        repository-name: INTI-CMNB/kibot_variants_arduprog_site
+        token: ${{ secrets.TOKEN }}

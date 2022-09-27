@@ -39,11 +39,3 @@ jobs:
       with:
         name: Automatic_outputs
         path: Generated
-
-    - name: Deploy navigate results
-      uses: JamesIves/github-pages-deploy-action@v4.3.3
-      with:
-        branch: main
-        folder: Generated
-        repository-name: INTI-CMNB/kibot_variants_arduprog_site
-        token: ${{ secrets.TOKEN }}
