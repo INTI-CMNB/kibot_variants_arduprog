@@ -3169,7 +3169,7 @@
     (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (id 2) (at 94.742 130.81 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "http://search.murata.co.jp/Ceramy/image/img/PDF/ENG/L0110S0100BLM21P.pdf" (id 3) (at 96.52 130.81 0)
+    (property "Datasheet" "https://www.murata.com/en-eu/api/pdfdownloadapi?cate=cgsubChipFerriBead&partno=BLM21PG221SN1%23" (id 3) (at 96.52 130.81 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "MFN" "Murata" (id 4) (at 96.52 130.81 0)
