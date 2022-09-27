@@ -5,12 +5,12 @@ name: "Variants demo using --quick-start"
 on:
   push:
     paths:
-      - '*.sch'
+      - '*.kicad_sch'
       - '*.kicad_pcb'
       - '.github/workflows/kibot_quick_start.yml'
   pull_request:
     paths:
-      - '*.sch'
+      - '*.kicad_sch'
       - '*.kicad_pcb'
       - '.github/workflows/kibot_quick_start.yml'
 
@@ -18,7 +18,7 @@ on:
 jobs:
   quick:
     runs-on: ubuntu-latest
-    container: ghcr.io/inti-cmnb/kicad6_auto:latest
+    container: ghcr.io/inti-cmnb/kicad6_auto:dev
 
     steps:
     - uses: actions/checkout@v2

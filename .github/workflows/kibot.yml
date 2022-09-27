@@ -5,14 +5,14 @@ name: "Variants demo using a Makefile"
 on:
   push:
     paths:
-      - '*.sch'
+      - '*.kicad_sch'
       - '*.kicad_pcb'
       - '*.kibot.yaml'
       - 'Makefile'
       - '.github/workflows/kibot.yml'
   pull_request:
     paths:
-      - '*.sch'
+      - '*.kicad_sch'
       - '*.kicad_pcb'
       - '*.kibot.yaml'
       - 'Makefile'
