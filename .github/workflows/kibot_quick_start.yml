@@ -36,6 +36,15 @@ jobs:
         name: Automatic_outputs
         path: Generated
 
+  # This step is to upload the results to another repo (web pages)
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Retrieve results
+      uses: actions/download-artifact@v2
+      with:
+        name: Automatic_outputs
+
     - name: Deploy navigate results
       uses: JamesIves/github-pages-deploy-action@v4.3.3
       with:
@@ -43,3 +52,4 @@ jobs:
         folder: Generated
         repository-name: INTI-CMNB/kibot_variants_arduprog_site
         token: ${{ secrets.TOKEN }}
+
