@@ -18,10 +18,13 @@ on:
 jobs:
   quick:
     runs-on: ubuntu-latest
-    container: ghcr.io/inti-cmnb/kicad6_auto:dev
+    container: ghcr.io/inti-cmnb/kicad6_auto:latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
+      with:
+        # So we can run a diff between last 2 changes
+        fetch-depth: '0'
 
     - name: Quick Start
       run: |
