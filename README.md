@@ -31,7 +31,8 @@ Typical applications are:
 - Testing purposes
 
 Currently KiBot can handle not only which components are soldered, but also different values.
-The support for different values is currently experimental.
+The support for different values is complex and only used by a minority.
+So please be patient if some use case isn't well covered, just report it.
 
 
 # Implementation
