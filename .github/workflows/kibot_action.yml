@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
     - name: Run ERC
       uses: INTI-CMNB/KiBot@v2_k6
@@ -36,7 +36,7 @@ jobs:
         targets: __NONE__
 
     - name: Retrieve results
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: ERC_Output
         path: Generated
@@ -47,7 +47,7 @@ jobs:
     needs: ERC
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
     - name: Run DRC
       uses: INTI-CMNB/KiBot@v2_k6
@@ -58,7 +58,7 @@ jobs:
         targets: __NONE__
 
     - name: Retrieve results
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v3
       with:
         name: DRC_Output
         path: Generated
@@ -70,7 +70,7 @@ jobs:
     needs: [ERC, DRC]
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
     - uses: INTI-CMNB/KiBot@v2_k6
       with:
@@ -80,7 +80,7 @@ jobs:
         skip: all
 
     - name: upload results
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: default_variant
         path: default
@@ -92,7 +92,7 @@ jobs:
     needs: [ERC, DRC]
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
     - uses: INTI-CMNB/KiBot@v2_k6
       with:
@@ -102,7 +102,7 @@ jobs:
         skip: all
 
     - name: upload results
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: USB_variant
         path: USB
@@ -114,7 +114,7 @@ jobs:
     needs: [ERC, DRC]
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
     - uses: INTI-CMNB/KiBot@v2_k6
       with:
@@ -124,7 +124,7 @@ jobs:
         skip: all
 
     - name: upload results
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: XTAL_variant
         path: XTAL
