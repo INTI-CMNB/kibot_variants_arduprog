@@ -30,7 +30,6 @@ jobs:
     - name: Run ERC
       uses: INTI-CMNB/KiBot@v2_k6
       with:
-        kicad: 5
         dir: Generated
         skip: run_drc
         targets: __NONE__
@@ -52,7 +51,6 @@ jobs:
     - name: Run DRC
       uses: INTI-CMNB/KiBot@v2_k6
       with:
-        kicad: 5
         dir: Generated
         skip: run_erc
         targets: __NONE__
@@ -74,7 +72,6 @@ jobs:
 
     - uses: INTI-CMNB/KiBot@v2_k6
       with:
-        kicad: 5
         dir: default
         variant: default
         skip: all
@@ -96,7 +93,6 @@ jobs:
 
     - uses: INTI-CMNB/KiBot@v2_k6
       with:
-        kicad: 5
         dir: USB
         variant: USB
         skip: all
@@ -118,7 +114,6 @@ jobs:
 
     - uses: INTI-CMNB/KiBot@v2_k6
       with:
-        kicad: 5
         dir: XTAL
         variant: XTAL
         skip: all
