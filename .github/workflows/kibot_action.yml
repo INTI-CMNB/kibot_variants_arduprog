@@ -74,7 +74,7 @@ jobs:
       with:
         dir: default
         variant: default
-        skip: all
+        skip: run_erc,run_drc
 
     - name: upload results
       uses: actions/upload-artifact@v3
@@ -95,7 +95,7 @@ jobs:
       with:
         dir: USB
         variant: USB
-        skip: all
+        skip: run_erc,run_drc
 
     - name: upload results
       uses: actions/upload-artifact@v3
@@ -116,7 +116,7 @@ jobs:
       with:
         dir: XTAL
         variant: XTAL
-        skip: all
+        skip: run_erc,run_drc
 
     - name: upload results
       uses: actions/upload-artifact@v3
