@@ -2,11 +2,24 @@
 kibot:
   version: 1
 
+globals:
+  # Filters for KiBot warnings
+  filters:
+    - filter: Ignore PcbDraw missing components
+      number: 103
+    - filter: Ignore missing KiCad config, not in docker images
+      number: 8
+    - filter: Ignore missing KiCad 3D models, not in docker images
+      number: 10
+    - filter: Ignore missing KiCad config from KiAuto, not in docker images
+      number: 58
+      regex: kicad_common.json
+
 preflight:
   check_zone_fills: true
   run_erc: true
   run_drc: true
-  update_xml: true
+  # Filters for ERC/DRC errors/warnings
   filters:
     - filter: 'We know some connectors extend outside the board'
       error: 'silk_over_copper'
