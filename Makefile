@@ -15,13 +15,13 @@ netlist:
 	$(KIBOT) $(DEBUG) -d $(OUT_DIR) -s run_erc,run_drc -i
 
 var_default:
-	$(KIBOT) $(DEBUG) -d $(OUT_DIR)/default -g variant=default -s all
+	$(KIBOT) $(DEBUG) -d $(OUT_DIR)/default -g variant=default -s run_erc,run_drc,update_xml
 
 var_usb:
-	$(KIBOT) $(DEBUG) -d $(OUT_DIR)/USB -g variant=USB -s all
+	$(KIBOT) $(DEBUG) -d $(OUT_DIR)/USB -g variant=USB -s run_erc,run_drc,update_xml
 
 var_xtal:
-	$(KIBOT) $(DEBUG) -d $(OUT_DIR)/XTAL -g variant=XTAL -s all
+	$(KIBOT) $(DEBUG) -d $(OUT_DIR)/XTAL -g variant=XTAL -s run_erc,run_drc,update_xml
 
 ardu_prog: netlist var_default var_usb var_xtal
 
