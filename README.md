@@ -370,15 +370,15 @@ Y1      16MHz                Crystal_SMD_Abracon_ABM3-2Pin_5.0x3.2mm     158.927
 
 Excluded components are removed from the 3D model (STEP file and 3D Viewer render):
 
-- Default variant
+- Default variant (click to enlarge)
 
 [![Default variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/STEP_default_s.png)](https://inti-cmnb.github.io/kibot_variants_arduprog/images/STEP_default.png)
 
-- XTAL variant
+- XTAL variant (click to enlarge)
 
 [![Default variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/STEP_XTAL_s.png)](https://inti-cmnb.github.io/kibot_variants_arduprog/images/STEP_XTAL.png)
 
-- USB variant
+- USB variant (click to enlarge)
 
 [![Default variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/STEP_USB_s.png)](https://inti-cmnb.github.io/kibot_variants_arduprog/images/STEP_USB.png)
 
