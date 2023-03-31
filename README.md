@@ -170,13 +170,13 @@ Lets say we have a copy of the repo containing this example and we want to gener
 In our example the HTML BoM output is named `bom_html` so we can just run:
 
 ```bash
-kibot -s all -d Result bom_html
+kibot -s run_erc,run_drc -d Result bom_html
 ```
 
 This will create `Result/BoM/t1-bom.html`. To generate the BoM for the **USB** variant we can use:
 
 ```bash
-kibot -s all -d USB -g variant=USB bom_html
+kibot -s run_erc,run_drc -d USB -g variant=USB bom_html
 ```
 
 And we'll get a different BoM in `USB/BoM/t1-bom_USB.html`.
@@ -187,9 +187,9 @@ The commands used are approximately these:
 ```bash
 kibot -d Generated -s run_drc -i
 kibot -d Generated -s run_erc -i
-kibot -d Generated/default -g variant=default -s all
-kibot -d Generated/USB -g variant=USB -s all
-kibot -d Generated/XTAL -g variant=XTAL -s all
+kibot -d Generated/default -g variant=default -s run_erc,run_drc
+kibot -d Generated/USB -g variant=USB -s run_erc,run_drc
+kibot -d Generated/XTAL -g variant=XTAL -s run_erc,run_drc
 ```
 
 The first two are the checks, no output generated. The other three skips the checks and generates all outputs for each variant.
