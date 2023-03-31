@@ -22,55 +22,92 @@ on:
 jobs:
   ERC:
     runs-on: ubuntu-latest
-    container: ghcr.io/inti-cmnb/kicad6_auto:latest
+    container: ghcr.io/inti-cmnb/kicad6_auto_full:latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
     - name: Run ERC
       run: |
         make erc
 
     - name: Retrieve results
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: ERC_Output
         path: Generated
 
   DRC:
     runs-on: ubuntu-latest
-    container: ghcr.io/inti-cmnb/kicad6_auto:latest
+    container: ghcr.io/inti-cmnb/kicad6_auto_full:latest
     needs: ERC
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
     - name: Run DRC
       run: |
         make drc
 
     - name: Retrieve results
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v3
       with:
         name: DRC_Output
         path: Generated
 
-  FabSch:
-    name: Schematic fabrication files
+  var_default:
+    name: Default variant
     runs-on: ubuntu-latest
-    container: ghcr.io/inti-cmnb/kicad6_auto:latest
+    container: ghcr.io/inti-cmnb/kicad6_auto_full:latest
     needs: [ERC, DRC]
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
-    - name: Run schematic stuff
+    - name: Generate default variant
       run: |
-        make ardu_prog
+        make var_default
 
     - name: Retrieve results
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v3
       with:
-        name: All_Output
+        name: Default_Output
         path: Generated
 
+  var_usb:
+    name: USB variant
+    runs-on: ubuntu-latest
+    container: ghcr.io/inti-cmnb/kicad6_auto_full:latest
+    needs: [ERC, DRC]
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Generate USB variant
+      run: |
+        make var_usb
+
+    - name: Retrieve results
+      uses: actions/upload-artifact@v3
+      with:
+        name: USB_Output
+        path: Generated
+
+  var_xtal:
+    name: XTAL variant
+    runs-on: ubuntu-latest
+    container: ghcr.io/inti-cmnb/kicad6_auto_full:latest
+    needs: [ERC, DRC]
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Generate XTAL variant
+      run: |
+        make var_xtal
+
+    - name: Retrieve results
+      uses: actions/upload-artifact@v3
+      with:
+        name: XTAL_Output
+        path: Generated
