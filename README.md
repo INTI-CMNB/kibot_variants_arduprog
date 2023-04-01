@@ -248,15 +248,15 @@ The following PDFs were gnerated including F.Fab, F.Paste, F.Adhes and Dwgs.User
 
 - Default variant
 
-[![Default variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-F_Fab+F_Paste+F_Adhes+Dwgs_User.jpg)](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-F_Fab+F_Paste+F_Adhes+Dwgs_User.pdf)
+[![Default variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-assembly.jpg)](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-assembly.pdf)
 
 - XTAL variant
 
-[![Default variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-F_Fab+F_Paste+F_Adhes+Dwgs_User_XTAL.jpg)](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-F_Fab+F_Paste+F_Adhes+Dwgs_User_XTAL.pdf)
+[![Default variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-assembly_XTAL.jpg)](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-assembly_XTAL.pdf)
 
 - USB variant
 
-[![Default variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-F_Fab+F_Paste+F_Adhes+Dwgs_User_USB.jpg)](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-F_Fab+F_Paste+F_Adhes+Dwgs_User_USB.pdf)
+[![Default variant](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-assembly_USB.jpg)](https://inti-cmnb.github.io/kibot_variants_arduprog/images/t1-assembly_USB.pdf)
 
 
 ## Gerbers
