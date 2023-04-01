@@ -140,17 +140,27 @@ outputs:
       sheet_reference_layout: pcb_print.kicad_wks
       scaling: 2.0
       pages:
-        - layers: [ F.Cu, F.SilkS, Dwgs.User ]
+        - layers: [ F.Paste, F.Adhes, Dwgs.User, F.Fab ]
+          sheet: 'Fabrication layers'
+        - layers:
+            - layer: F.Cu
+            - layer: F.Mask
+              color: '#14332440'
+            - layer: F.SilkS
+            - layer: Dwgs.User
           sheet: 'Top layer'
         - layers: [ GND.Cu, Dwgs.User ]
           sheet: 'GND plane'
         - layers: [ Power.Cu, Dwgs.User ]
           sheet: 'Power plane'
-        - layers: [ B.Cu, B.SilkS, Dwgs.User ]
+        - layers:
+            - layer: B.Cu
+            - layer: B.Mask
+              color: '#14332440'
+            - layer: B.SilkS
+            - layer: Dwgs.User
           sheet: 'Bottom layer'
           mirror: true
-        - layers: [ F.Paste, F.Adhes, Dwgs.User, F.Fab ]
-          sheet: 'Fabrication layers'
 
   - name: board_top
     comment: "Top layer view"
