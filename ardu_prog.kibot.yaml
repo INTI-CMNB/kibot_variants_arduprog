@@ -215,7 +215,7 @@ outputs:
         samples: 20
       point_of_view:
         rotate_x: 30
-        rotate_z: 30
+        rotate_z: -20
       outputs:
         - type: blender
         - type: render
