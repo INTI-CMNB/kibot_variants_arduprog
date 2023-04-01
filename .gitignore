@@ -2,3 +2,5 @@ fp-info-cache
 Generated
 t1-backups
 t1.xml
+*-bak
+.cache
