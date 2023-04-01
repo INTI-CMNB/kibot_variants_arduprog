@@ -38,9 +38,10 @@ So please be patient if some use case isn't well covered, just report it.
 # Implementation
 
 To create a variant you must add specific fields to the components in the schematic.
-Currently KiBot supports two methodes:
+Currently KiBot supports three methodes:
 
 - **KiBoM style**: one field, usually named *Config*, contains information to include or exclude a component for one or more variants.
+- **KiCost style**: one field assigns the component to one or more groups, you provide a regular expression to include certain groups.
 - **IBoM style**: one field assigns the component to a group, you provide lists to exclude or include certain groups.
 
 
@@ -198,7 +199,7 @@ All files are stored in the `Generated` folder.
 
 # Results
 
-Here is what we get, you can download the results obtained on GitHub CI/CD Actions from [here](https://github.com/INTI-CMNB/kibot_variants_arduprog/suites/1178852123/artifacts/17235638).
+Here is what we get, you can download the results obtained on GitHub CI/CD Actions from [here](https://github.com/INTI-CMNB/kibot_variants_arduprog/actions/runs/4584580459).
 Click on the images to get a larger image or the generated document.
 
 ## Schematic PDF
@@ -368,7 +369,7 @@ Y1      16MHz                Crystal_SMD_Abracon_ABM3-2Pin_5.0x3.2mm     158.927
 
 ## 3D Model
 
-Excluded components are removed from the 3D model (STEP file and 3D Viewer render):
+Excluded components are removed from the 3D model (STEP file, 3D Viewer render and Blender export):
 
 - Default variant (click to enlarge)
 
