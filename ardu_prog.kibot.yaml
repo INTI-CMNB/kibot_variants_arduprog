@@ -136,7 +136,7 @@ outputs:
     options:
       force_edge_cuts: true
       keep_temporal_files: true
-      title: "Arduino programmer KiBot demo"
+      title: "Arduino programmer KiBot demo (%V variant)"
       sheet_reference_layout: pcb_print.kicad_wks
       scaling: 2.0
       pages:
