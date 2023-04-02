@@ -6,6 +6,8 @@
 
   (paper "A4")
   (title_block
+    (title "Arduino UNO programmer")
+    (date "${date}")
     (rev "${git_hash}")
     (company "Instituto Nacional de Tecnología Industrial")
     (comment 4 "An example of KiBot variants")
