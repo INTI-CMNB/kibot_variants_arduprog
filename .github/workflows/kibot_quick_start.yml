@@ -52,6 +52,11 @@ jobs:
         name: Automatic_outputs
         path: Generated
 
+    - name: Disable Jekyll
+      # Jekyll will filter the KiRi folders
+      run: |
+        touch Generated/.nojekyll
+
     - name: Deploy navigate results
       uses: JamesIves/github-pages-deploy-action@v4.3.3
       with:
