@@ -23,17 +23,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
     - name: Run ERC
-      uses: INTI-CMNB/KiBot@v2_k6
+      uses: INTI-CMNB/KiBot@v2_k7
       with:
         dir: Generated
         skip: run_drc
         targets: __NONE__
 
     - name: Retrieve results
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: ERC_Output
         path: Generated
@@ -44,17 +44,17 @@ jobs:
     needs: ERC
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
     - name: Run DRC
-      uses: INTI-CMNB/KiBot@v2_k6
+      uses: INTI-CMNB/KiBot@v2_k7
       with:
         dir: Generated
         skip: run_erc
         targets: __NONE__
 
     - name: Retrieve results
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: DRC_Output
         path: Generated
@@ -66,16 +66,16 @@ jobs:
     needs: [ERC, DRC]
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
-    - uses: INTI-CMNB/KiBot@v2_k6
+    - uses: INTI-CMNB/KiBot@v2_k7
       with:
         dir: default
         variant: default
         skip: run_erc,run_drc
 
     - name: upload results
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: default_variant
         path: default
@@ -87,16 +87,16 @@ jobs:
     needs: [ERC, DRC]
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
-    - uses: INTI-CMNB/KiBot@v2_k6
+    - uses: INTI-CMNB/KiBot@v2_k7
       with:
         dir: USB
         variant: USB
         skip: run_erc,run_drc
 
     - name: upload results
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: USB_variant
         path: USB
@@ -108,16 +108,16 @@ jobs:
     needs: [ERC, DRC]
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
-    - uses: INTI-CMNB/KiBot@v2_k6
+    - uses: INTI-CMNB/KiBot@v2_k7
       with:
         dir: XTAL
         variant: XTAL
         skip: run_erc,run_drc
 
     - name: upload results
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: XTAL_variant
         path: XTAL

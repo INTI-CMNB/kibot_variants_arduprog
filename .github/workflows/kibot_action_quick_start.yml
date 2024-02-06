@@ -24,19 +24,18 @@ jobs:
 
     steps:
     - name: Get repo
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         # So we can run a diff between last 2 changes
         fetch-depth: '0'
 
     - name: Run KiBot
-      # v2_k6 for v1.5.1 has a permission problem
-      uses: INTI-CMNB/KiBot@v2_dk6
+      uses: INTI-CMNB/KiBot@v2_k7
       with:
         quickstart: YES
 
     - name: Upload results
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: Automatic_outputs
         path: Generated
