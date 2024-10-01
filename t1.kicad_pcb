@@ -184,7 +184,7 @@
 				)
 			)
 		)
-		(property "MFN" "Vishay Beyschlag/Draloric/BC Components"
+		(property "MNF" "Vishay Beyschlag/Draloric/BC Components"
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -197,7 +197,7 @@
 				)
 			)
 		)
-		(property "MFP" "MAL215371479E3"
+		(property "MPN" "MAL215371479E3"
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -2195,7 +2195,7 @@
 				)
 			)
 		)
-		(property "MFN" "OSRAM Opto Semiconductors Inc."
+		(property "MNF" "OSRAM Opto Semiconductors Inc."
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -2208,7 +2208,7 @@
 				)
 			)
 		)
-		(property "MFP" "LG R971-KN-1"
+		(property "MPN" "LG R971-KN-1"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -2453,7 +2453,7 @@
 				)
 			)
 		)
-		(property "MFN" "OSRAM Opto Semiconductors Inc."
+		(property "MNF" "OSRAM Opto Semiconductors Inc."
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -2466,7 +2466,7 @@
 				)
 			)
 		)
-		(property "MFP" "LG R971-KN-1"
+		(property "MPN" "LG R971-KN-1"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -2934,7 +2934,7 @@
 				)
 			)
 		)
-		(property "MFN" "Murata"
+		(property "MNF" "Murata"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -2947,7 +2947,7 @@
 				)
 			)
 		)
-		(property "MFP" "BLM21PG221SN1D"
+		(property "MPN" "BLM21PG221SN1D"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -4075,7 +4075,7 @@
 				)
 			)
 		)
-		(property "MFN" ""
+		(property "MNF" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -4088,7 +4088,7 @@
 				)
 			)
 		)
-		(property "MFP" "694106106102"
+		(property "MPN" "694106106102"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -4787,7 +4787,7 @@
 				)
 			)
 		)
-		(property "MFN" "Harwin Inc."
+		(property "MNF" "Harwin Inc."
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -4800,7 +4800,7 @@
 				)
 			)
 		)
-		(property "MFP" "M20-9980246-ND"
+		(property "MPN" "M20-9980246-ND"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -5132,7 +5132,7 @@
 				)
 			)
 		)
-		(property "MFN" "Harwin Inc."
+		(property "MNF" "Harwin Inc."
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -5145,7 +5145,7 @@
 				)
 			)
 		)
-		(property "MFP" "M20-9980346"
+		(property "MPN" "M20-9980346"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -7580,7 +7580,7 @@
 				)
 			)
 		)
-		(property "MFN" "Bourns Inc."
+		(property "MNF" "Bourns Inc."
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -7593,7 +7593,7 @@
 				)
 			)
 		)
-		(property "MFP" "CG0603MLC-05E"
+		(property "MPN" "CG0603MLC-05E"
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -7894,7 +7894,7 @@
 				)
 			)
 		)
-		(property "MFN" "Abracon LLC"
+		(property "MNF" "Abracon LLC"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -7907,7 +7907,7 @@
 				)
 			)
 		)
-		(property "MFP" "ABM3-16.000MHZ-B2-T"
+		(property "MPN" "ABM3-16.000MHZ-B2-T"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -8247,7 +8247,7 @@
 				)
 			)
 		)
-		(property "MFN" "TE Connectivity AMP Connectors"
+		(property "MNF" "TE Connectivity AMP Connectors"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -8260,7 +8260,7 @@
 				)
 			)
 		)
-		(property "MFP" "292304-1"
+		(property "MPN" "292304-1"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -9194,7 +9194,7 @@
 				)
 			)
 		)
-		(property "MFN" "Bourns Inc."
+		(property "MNF" "Bourns Inc."
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -9207,7 +9207,7 @@
 				)
 			)
 		)
-		(property "MFP" "CG0603MLC-05E"
+		(property "MPN" "CG0603MLC-05E"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")

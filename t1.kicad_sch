@@ -7552,7 +7552,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFN" "Bourns Inc."
+		(property "MNF" "Bourns Inc."
 			(at 100.33 119.38 0)
 			(effects
 				(font
@@ -7561,7 +7561,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFP" "CG0603MLC-05E"
+		(property "MPN" "CG0603MLC-05E"
 			(at 100.33 119.38 0)
 			(effects
 				(font
@@ -7693,7 +7693,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFN" "Abracon LLC"
+		(property "MNF" "Abracon LLC"
 			(at 120.65 80.01 90)
 			(effects
 				(font
@@ -7702,7 +7702,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFP" "ABM3-16.000MHZ-B2-T"
+		(property "MPN" "ABM3-16.000MHZ-B2-T"
 			(at 120.65 80.01 90)
 			(effects
 				(font
@@ -7939,7 +7939,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFN" "TE Connectivity AMP Connectors"
+		(property "MNF" "TE Connectivity AMP Connectors"
 			(at 72.39 107.95 0)
 			(effects
 				(font
@@ -7948,7 +7948,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFP" "292304-1"
+		(property "MPN" "292304-1"
 			(at 72.39 107.95 0)
 			(effects
 				(font
@@ -8044,7 +8044,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFN" "Bourns Inc."
+		(property "MNF" "Bourns Inc."
 			(at 91.44 119.38 0)
 			(effects
 				(font
@@ -8053,7 +8053,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFP" "CG0603MLC-05E"
+		(property "MPN" "CG0603MLC-05E"
 			(at 91.44 119.38 0)
 			(effects
 				(font
@@ -8185,7 +8185,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFN" "Murata"
+		(property "MNF" "Murata"
 			(at 96.52 130.81 0)
 			(effects
 				(font
@@ -8194,7 +8194,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFP" "BLM21PG221SN1D"
+		(property "MPN" "BLM21PG221SN1D"
 			(at 96.52 130.81 0)
 			(effects
 				(font
@@ -9015,7 +9015,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFN" "OSRAM Opto Semiconductors Inc."
+		(property "MNF" "OSRAM Opto Semiconductors Inc."
 			(at 248.92 115.57 90)
 			(effects
 				(font
@@ -9024,7 +9024,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFP" "LG R971-KN-1"
+		(property "MPN" "LG R971-KN-1"
 			(at 248.92 115.57 90)
 			(effects
 				(font
@@ -9238,7 +9238,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFN" "Würth Elektronik"
+		(property "MNF" "Würth Elektronik"
 			(at 54.61 50.8 0)
 			(effects
 				(font
@@ -9247,7 +9247,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFP" "694106106102"
+		(property "MPN" "694106106102"
 			(at 54.61 50.8 0)
 			(effects
 				(font
@@ -10207,7 +10207,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFN" "Harwin Inc."
+		(property "MNF" "Harwin Inc."
 			(at 213.36 74.93 0)
 			(effects
 				(font
@@ -10216,7 +10216,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFP" "M20-9980346"
+		(property "MPN" "M20-9980346"
 			(at 213.36 74.93 0)
 			(effects
 				(font
@@ -10443,7 +10443,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFN" "Harwin Inc."
+		(property "MNF" "Harwin Inc."
 			(at 208.28 86.36 0)
 			(effects
 				(font
@@ -10452,7 +10452,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFP" "M20-9980246-ND"
+		(property "MPN" "M20-9980246-ND"
 			(at 208.28 86.36 0)
 			(effects
 				(font
@@ -10757,7 +10757,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFN" "OSRAM Opto Semiconductors Inc."
+		(property "MNF" "OSRAM Opto Semiconductors Inc."
 			(at 236.22 115.57 90)
 			(effects
 				(font
@@ -10766,7 +10766,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFP" "LG R971-KN-1"
+		(property "MPN" "LG R971-KN-1"
 			(at 236.22 115.57 90)
 			(effects
 				(font
@@ -11526,7 +11526,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFN" "Vishay Beyschlag/Draloric/BC Components"
+		(property "MNF" "Vishay Beyschlag/Draloric/BC Components"
 			(at 82.55 53.34 0)
 			(effects
 				(font
@@ -11535,7 +11535,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFP" "MAL215371479E3"
+		(property "MPN" "MAL215371479E3"
 			(at 82.55 53.34 0)
 			(effects
 				(font
