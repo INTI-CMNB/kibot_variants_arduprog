@@ -1,0 +1,53 @@
+name: "Variants demo --quick-start pre-release"
+
+on:
+  workflow_dispatch
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  quick:
+    runs-on: ubuntu-latest
+    container: ghcr.io/inti-cmnb/kicad_auto_test:ki8
+
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        # So we can run a diff between last 2 changes
+        fetch-depth: '0'
+
+    - name: Quick Start
+      run: |
+        kibot --quick-start
+
+    - name: Retrieve results
+      uses: actions/upload-artifact@v4
+      with:
+        name: Automatic_outputs
+        path: Generated
+
+  # This step is to upload the results to another repo (web pages)
+  deploy:
+    runs-on: ubuntu-latest
+    needs: quick
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Retrieve results
+      uses: actions/download-artifact@v4
+      with:
+        name: Automatic_outputs
+        path: Generated
+
+    - name: Disable Jekyll
+      # Jekyll will filter the KiRi folders
+      run: |
+        touch Generated/.nojekyll
+
+    - name: Deploy navigate results
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        branch: main
+        folder: Generated
+        repository-name: INTI-CMNB/kibot_variants_arduprog_site
+        token: ${{ secrets.TOKEN }}
