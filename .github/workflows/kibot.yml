@@ -24,7 +24,7 @@ on:
 jobs:
   ERC:
     runs-on: ubuntu-latest
-    container: ghcr.io/inti-cmnb/kicad8_auto_full:latest
+    container: ghcr.io/inti-cmnb/kicad9_auto_full:latest
 
     steps:
     - uses: actions/checkout@v4
@@ -41,7 +41,7 @@ jobs:
 
   DRC:
     runs-on: ubuntu-latest
-    container: ghcr.io/inti-cmnb/kicad8_auto_full:latest
+    container: ghcr.io/inti-cmnb/kicad9_auto_full:latest
     needs: ERC
 
     steps:
@@ -60,7 +60,7 @@ jobs:
   var_default:
     name: Default variant
     runs-on: ubuntu-latest
-    container: ghcr.io/inti-cmnb/kicad8_auto_full:latest
+    container: ghcr.io/inti-cmnb/kicad9_auto_full:latest
     needs: [ERC, DRC]
 
     steps:
@@ -79,7 +79,7 @@ jobs:
   var_usb:
     name: USB variant
     runs-on: ubuntu-latest
-    container: ghcr.io/inti-cmnb/kicad8_auto_full:latest
+    container: ghcr.io/inti-cmnb/kicad9_auto_full:latest
     needs: [ERC, DRC]
 
     steps:
@@ -98,7 +98,7 @@ jobs:
   var_xtal:
     name: XTAL variant
     runs-on: ubuntu-latest
-    container: ghcr.io/inti-cmnb/kicad8_auto_full:latest
+    container: ghcr.io/inti-cmnb/kicad9_auto_full:latest
     needs: [ERC, DRC]
 
     steps:
